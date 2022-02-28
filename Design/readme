@@ -23,3 +23,16 @@ A function to return the direction of snake's motion.
 A function to update the game according to snake's movement.
 A function to keep track of the forthcoming cell.
 After this we will also define a main function to actually play the game.
+
+
+
+
+We need a class Game, which contains data members to take care of the snake and the board.
+We need a set of fixed directions for movement, and a direction member to determine movement.
+Along with a boolean to check for the game to be over!
+
+We need methods to initialise and receive the values.
+We need to ensure that the game is updated as per the user, i.e. actually calling the functions for moving the snake, getting the food etc.
+One characteristic is that, even though direction of movement is somewhat characteristic to the snake, the position is actually attributed to the cell, which is a part of the board. Since we have the snake as well as access to current values here, and have also added direction members here, it seems right to and modular to maintain directions here.
+
+A function to update the direction here itself.
