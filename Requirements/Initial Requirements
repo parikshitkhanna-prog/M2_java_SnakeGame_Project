@@ -1,25 +1,64 @@
-Game
-This is the meaty part of the code, our primary logic, the game!
-It needs an instance of
+What do we need in our snake game?
+
+A snake? Ofcourse!
+Food for the snake!
+A board.. where will the snake move afterall
+Logic for the real game
+Now that we're clear with what makes a Snake Game, lets look at it with an object oriented approach. What classes do we need?
+
+Snake
+A Snake Class for the snake. We want to
+--> Know and maintain the size of the snake.
+--> The ability to control movement of the Snake
+--> Check whether it did not hit a Wall.
+
+So it shall contain the following functions:
+
+A constructor to initialise the snake with its head.
+A function to grow the size of the snake.
+A function for the snake to move.
+A function to check if the snake has crashed.
+A function that returns the snake
+A function to set values in the snake.
+A function that returns the head of the snake.
+A function to set the head of the snake.
+
+
+
+Cell
+While food seemed intuitive to me while thinking, cell feels intuitive to me for working! Why so?
+Our boards, consistes of various cells, A cell at random will be proclaimed as the cell containing food. The identify of food is random, but identity of cell is meaningful, so I would rather make a class Cell than food.
+Cells are also important to kep track of position of the snake!
+
+Each cell is thereby contains the information about
+--> Its Row
+--> Its Column
+--> Whether it contains food or not?
+--> Whether it is a part of the snake or not?
+
+Hence its member functions include
+
+A constructor to initialise it.
+A function that specifies its type (contains food etc.)
+A function that returns its type.
+A function to return its row.
+A function to return its column.
+
+
 
 Board
-Game
-Notice how Board already contains instances of Cell.
-This also needs to contain the following
---> Ability and logic to use the classes we make and conduct a game!
---> Know when the game is over
+It is the set of valid points for the game to function on, qualitatively a matrix of cells.
+While the cells revert to the questions, being the collection and home of cells, the board needs to ensure the cells get satisfiable answers
 
-So the following functions will be required:
+Whether it contains food or not?
+We need to assign food to some random cell as well. This is attributed to the board, as the cell doesn't choose whether it shall contain food, the board is acquainted with the cells it contains and hence should empowered to assign a cell to contain food.
 
-A constructor to initialise the game with a snake and a board.
-A function to return the snake.
-A function to set the value of snake.
-A function to return the board.
-A function to set the value of board
-A function to set the game to be over.
-A function to check if the game is over.
-A function to set the direction of snake's motion.
-A function to return the direction of snake's motion.
-A function to update the game according to snake's movement.
-A function to keep track of the forthcoming cell.
-After this we will also define a main function to actually play the game.
+Whether it is a part of the snake or not?
+This is answered by the Snake class we described above. While food is an attribute of the board, movement is an attribute of the snake! Hence it is wise to let the Snake class contain method pertaining to the Snake's movement.
+
+It will contain the following functions
+
+A constructor to initialise te board with number of rows and columns.
+A function to return its cells.
+A function to set values in its cells.
+A function to generate Food.
