@@ -1,1 +1,25 @@
+Game
+This is the meaty part of the code, our primary logic, the game!
+It needs an instance of
 
+Board
+Game
+Notice how Board already contains instances of Cell.
+This also needs to contain the following
+--> Ability and logic to use the classes we make and conduct a game!
+--> Know when the game is over
+
+So the following functions will be required:
+
+A constructor to initialise the game with a snake and a board.
+A function to return the snake.
+A function to set the value of snake.
+A function to return the board.
+A function to set the value of board
+A function to set the game to be over.
+A function to check if the game is over.
+A function to set the direction of snake's motion.
+A function to return the direction of snake's motion.
+A function to update the game according to snake's movement.
+A function to keep track of the forthcoming cell.
+After this we will also define a main function to actually play the game.
